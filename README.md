@@ -11,8 +11,7 @@ Or here: https://bitbucket.org/atlas0fd00m/rfcat/overview
 3) Now's a good time to download these files. I recommand putting the Insteon-dissector.lua in the /usr/share/wireshark directory. 
 
 4) Find Wireshark's original init.lua file (link in /usr/share/wireshark/ -> /etc/wireshark/init.lua)<br> 
-   \tEither: \ta) replace it with this init.lua file here or <br>
-   \t\t\t b) add a line at the very end to dofile(<path to Insteon-dissector.lua>).<br>
+   Either: a) replace it with this init.lua file here or b) add a line at the very end to dofile(<path to Insteon-dissector.lua>).<br>
            
 5) Restart Wireshark to ensure no issue with the init.lua and Insteon-dissector configs. Then in Wireshark go to  Edit->Preferences->Protocols->DLT_USER->Edit. Click +, Select User 0 (DLT=147), type "Insteon" in the payload protocol column. If everything has gone well, this box should be green. Click Ok. Ok again.<br>
 - If you use another profile, this code will need to be changed to reflect that. The insteondump.py and pcapcreator.py       programs will need to be modified accordingly.
