@@ -24,10 +24,10 @@ The end product is a filename.pcap with any Insteon traffic that was collected.
 ./insteonanalyzer -i filename.insteondump for network "map" analysis on what was collected.
 
 2) For livemode:<br>
-     - mkfifo <pipename>
-     - wireshark -i <pipename>
-     - ./insteondump.py -l -p <pipename>
-     - Wait for some traffic (don't kill the pipe or Wireshark just yet)
-     - In a second terminal, run: ./isnteonscanner -i 1 (requires a 2nd YardStick to be plugged in). 
+     - mkfifo <pipename><br>
+     - wireshark -i <pipename><br>
+     - ./insteondump.py -l -p <pipename><br>
+     - Wait for some traffic (don't kill the pipe or Wireshark just yet)<br>
+     - In a second terminal, run: ./isnteonscanner -i 1 (requires a 2nd YardStick to be plugged in). <br>
         -- This program reads device IDs saved in insteon.devices file, then spoofs ping and ID request from each devices to every other device. ID request responses contain the device category from the responder.
 
