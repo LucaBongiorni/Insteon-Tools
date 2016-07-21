@@ -16,3 +16,18 @@ Or here: https://bitbucket.org/atlas0fd00m/rfcat/overview
            
 5) Restart Wireshark to ensure no issue with the init.lua and Insteon-dissector configs. Will need configure a user defined protocol. In Wireshark go to  Edit->Preferences->Protocols->DLT_USER->Edit. Click +, Select User 0 (DLT=147), type "Insteon" in the payload protocol column. If everything has gone well, this box should be green. Click Ok. Ok again.
 
+## Running Instructions:
+1) For off-line mode, run:
+     - ./insteondump.py -o <filename>  
+The end product is a filename.pcap with any Insteon traffic that was collected.
+2 Additional files are created, filename.raw and filename.insteondump. filename.insteondump can be put into
+./insteonanalyzer -i filename.insteondump for network "map" analysis on what was collected.
+
+2) For livemode:
+     - mkfifo <pipename>
+     - wireshark -i <pipename>
+     - ./insteondump.py -l -p <pipename>
+     - Wait for some traffic (don't kill the pipe or Wireshark just yet)
+     - In a second terminal, run: ./isnteonscanner -i 1 (requires a 2nd YardStick to be plugged in). 
+        -- This program reads device IDs saved in insteon.devices file, then spoofs ping and ID request from each devices to every other device. ID request responses contain the device category from the responder.
+
