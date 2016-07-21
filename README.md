@@ -25,9 +25,9 @@ Or here: https://bitbucket.org/atlas0fd00m/rfcat/overview
      -- filename.insteondump can be put into ./insteonanalyzer -i filename.insteondump for network "map" analysis on what     was collected.
 
 2) For live mode:<br>
-     - mkfifo <pipename><br>
-     - wireshark -i <pipename><br>
-     - ./insteondump.py -l -p <pipename><br>
+     - mkfifo \<pipename\><br>
+     - wireshark -i \<pipename\><br> and start listening on the pipe once wireshark starts.
+     - ./insteondump.py -l -p \<pipename\><br>
      - Wait for some traffic (don't kill the pipe or Wireshark just yet)<br>
      - In a second terminal, run: ./isnteonscanner -i 1 (requires a 2nd YardStick to be plugged in). <br>
         -- This program reads device IDs saved in insteon.devices file, then spoofs ping and ID request from each devices     to every other device. ID request responses contain the device category from the responder.
