@@ -26,8 +26,8 @@ Or here: https://bitbucket.org/atlas0fd00m/rfcat/overview
 2) For live mode:<br>
 - mkfifo \<pipename\><br>
 - wireshark -i \<pipename\> and start listening on the pipe once wireshark starts.<br>
-- ./insteondump.py -l -p \<pipename\><br>
+- ./insteondump.py -l -p \<pipename\><br> (run using either sudo or root)
 - Wait for some traffic (don't kill the pipe or Wireshark just yet)<br>
-- In a second terminal, run: ./insteonscanner.py -i 1 (requires a 2nd YardStick to be plugged in). <br>
+- In a second terminal, run: ./insteonscanner.py -i 1 (agin, run using either sudo or root.  This requires a 2nd YardStick to be plugged in). <br>
 -- This program reads device IDs saved in insteon.devices file, then spoofs ping and ID request from each devices to every other device. ID request responses contain the device category from the responder.
 
