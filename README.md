@@ -17,13 +17,13 @@ Or here: https://bitbucket.org/atlas0fd00m/rfcat/overview
 5) Restart Wireshark to ensure no issue with the init.lua and Insteon-dissector configs. Will need configure a user defined protocol. In Wireshark go to  Edit->Preferences->Protocols->DLT_USER->Edit. Click +, Select User 0 (DLT=147), type "Insteon" in the payload protocol column. If everything has gone well, this box should be green. Click Ok. Ok again.
 
 ## Running Instructions:
-1) For off-line mode, run:
-     - ./insteondump.py -o <filename>  
-The end product is a filename.pcap with any Insteon traffic that was collected.
-2 Additional files are created, filename.raw and filename.insteondump. filename.insteondump can be put into
-./insteonanalyzer -i filename.insteondump for network "map" analysis on what was collected.
+1) For off-line mode, run:<br>
+     - ./insteondump.py -o <filename>  <br>
+     -- The end product is a filename.pcap with any Insteon traffic that was collected.<br>
+     -- 2 Additional files are created, filename.raw and filename.insteondump. <br>
+     -- filename.insteondump can be put into ./insteonanalyzer -i filename.insteondump for network "map" analysis on what     was collected.
 
-2) For livemode:<br>
+2) For live mode:<br>
      - mkfifo <pipename><br>
      - wireshark -i <pipename><br>
      - ./insteondump.py -l -p <pipename><br>
