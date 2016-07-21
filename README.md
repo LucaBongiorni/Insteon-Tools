@@ -23,7 +23,7 @@ The end product is a filename.pcap with any Insteon traffic that was collected.
 2 Additional files are created, filename.raw and filename.insteondump. filename.insteondump can be put into
 ./insteonanalyzer -i filename.insteondump for network "map" analysis on what was collected.
 
-2) For livemode:\n
+2) For livemode:<br>
      - mkfifo <pipename>
      - wireshark -i <pipename>
      - ./insteondump.py -l -p <pipename>
