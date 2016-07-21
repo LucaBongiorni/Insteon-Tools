@@ -29,5 +29,5 @@ The end product is a filename.pcap with any Insteon traffic that was collected.
      - ./insteondump.py -l -p <pipename><br>
      - Wait for some traffic (don't kill the pipe or Wireshark just yet)<br>
      - In a second terminal, run: ./isnteonscanner -i 1 (requires a 2nd YardStick to be plugged in). <br>
-        -- This program reads device IDs saved in insteon.devices file, then spoofs ping and ID request from each devices to every other device. ID request responses contain the device category from the responder.
+        -- This program reads device IDs saved in insteon.devices file, then spoofs ping and ID request from each devices     to every other device. ID request responses contain the device category from the responder.
 
