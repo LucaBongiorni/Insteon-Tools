@@ -19,7 +19,7 @@ Or here: https://bitbucket.org/atlas0fd00m/rfcat/overview
 
 ## Running Instructions:
 1) For off-line mode, run:<br>
-     - ./insteondump.py -o <filename>  <br>
+     - ./insteondump.py -o \<filename\>  <br>
      -- The end product is a filename.pcap with any Insteon traffic that was collected.<br>
      -- 2 Additional files are created, filename.raw and filename.insteondump. <br>
      -- filename.insteondump can be put into ./insteonanalyzer -i filename.insteondump for network "map" analysis on what     was collected.
