@@ -18,7 +18,7 @@ Or here: https://bitbucket.org/atlas0fd00m/rfcat/overview
 
 ## Running Instructions:
 1) For off-line mode, run:<br>
-- ./insteondump.py -o \<filename\>  <br>
+- ./insteonlisten.py -o \<filename\>  <br>
 -- The end product is a filename.pcap with any Insteon traffic that was collected.<br>
 -- 2 Additional files are created, filename.raw and filename.insteondump. <br>
 -- filename.insteondump can be put into ./insteonanalyzer -i filename.insteondump for network "map" analysis on what     was collected.
@@ -26,7 +26,7 @@ Or here: https://bitbucket.org/atlas0fd00m/rfcat/overview
 2) For live mode:<br>
 - mkfifo \<pipename\><br>
 - wireshark -i \<pipename\> and start listening on the pipe once wireshark starts.<br>
-- ./insteondump.py -l -p \<pipename\><br> (run using either sudo or root)
+- ./insteonlisten.py -l -p \<pipename\><br> (run using either sudo or root)
 - Wait for some traffic (don't kill the pipe or Wireshark just yet)<br>
 - In a second terminal, run: ./insteonscanner.py -i 1 (agin, run using either sudo or root.  This requires a 2nd YardStick to be plugged in). <br>
 -- This program reads device IDs saved in insteon.devices file, then spoofs ping and ID request from each devices to every other device. ID request responses contain the device category from the responder.
