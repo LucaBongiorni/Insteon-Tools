@@ -37,7 +37,7 @@ local pf_crc				= ProtoField.new   ("CRC", "insteon.crc", ftypes.BYTES, nil, bas
 local pf_usr_data			= ProtoField.new   ("Data", "insteon.data", ftypes.BYTES, nil, base.NONE)
 
 -- a few others for special things:
-local pf_firmware			= ProtoField.new   ("Firwmware", "insteon.firmware", ftypes.BYTES, nil, base.NONE)
+local pf_firmware			= ProtoField.new   ("Firmware", "insteon.firmware", ftypes.BYTES, nil, base.NONE)
 local pf_devType			= ProtoField.new   ("Device Type", "insteon.device_type", ftypes.BYTES, nil, base.NONE)
 local pf_devSubType			= ProtoField.new   ("Device Subtype", "insteon.device_subtype", ftypes.BYTES, nil, base.NONE)
 
